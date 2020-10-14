@@ -11,7 +11,7 @@ def threaded(c):
 	while True:
 
 		# data received from client
-		data = c.recv(16)
+		data = c.recv(1024)
 		if not data or data == 'close':
 			print('Bye')
 
