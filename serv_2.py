@@ -21,7 +21,7 @@ def threaded(c):
 
 		# reverse the given string from client
 		# data = data[::-1]
-
+		print(data.decode("utf-8"))
 		# send back reversed string to client
 		c.send(data)
 
