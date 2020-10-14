@@ -12,7 +12,7 @@ def threaded(c):
 
 		# data received from client
 		data = c.recv(1024)
-		if not data or data == 'close':
+		if data == 'close':
 			print('Bye')
 
 			# lock released on exit
@@ -24,7 +24,7 @@ def threaded(c):
 		print(data.decode("utf-8"))
 		# send back reversed string to client
 		c.send(data)
-
+	print("close connection")
 	# connection closed
 	c.close()
 
