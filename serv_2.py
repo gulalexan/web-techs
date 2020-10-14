@@ -55,7 +55,7 @@ def Main():
 		print('Connected to :', addr[0], ':', addr[1])
 
 		# Start a new thread and return its identifier
-		threading.Thread(threaded, (c,)).start()
+		threading.Thread(target=threaded, args=(c,)).start()
 	s.close()
 
 
