@@ -12,7 +12,7 @@ def threaded(c):
 
 		# data received from client
 		data = c.recv(1024)
-		if data == 'close':
+		if not data or data == 'close':
 			print('Bye')
 
 			# lock released on exit
